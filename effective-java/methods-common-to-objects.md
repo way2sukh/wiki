@@ -10,7 +10,7 @@ Although `Object` is a concrete class, it is designed primarily for extension. A
 - ### Item 11: Always override hashCode when you override equals
 	- If two objects are equal according to the equals(Object) method, then calling hashCode on the two objects must produce the same integer result.
 	- If two objects are unequal according to the equals(Object) method, it is not required that calling hashCode on each of the objects must produce distinct results. However, the programmer should be aware that producing distinct results for unequal objects may improve the performance of hash tables. <br />
-	*Tips*
+	**Tips**
 	- *Don't use Objects.hash in performance critical applications as they run more slowly because they entail array creation to pass a variable number of arguments, as well as boxing and unboxing if any of the arguments are of primitive type.*
 	- *If a class is immutable and the cost of computing the hash code is significant, you might consider caching the hash code in the object rather than recalculating it each time it is requested.*
 - ### Item 12: Always override toString
