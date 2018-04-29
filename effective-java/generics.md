@@ -1,9 +1,9 @@
 ## Generics
 - ### Item 26: Don’t use raw types
 	- Difference between the raw type List and the parameterized type List<Object>? <br />
-	You lose type safety if you use a raw type such as List, but not if you use a parameterized type such as List<Object>. While you can pass a List<String> to a parameter of type List, you can’t pass it to a parameter of type List<Object>.
+		You lose type safety if you use a raw type such as List, but not if you use a parameterized type such as List<Object>. While you can pass a List<String> to a parameter of type List, you can’t pass it to a parameter of type List<Object>.
 	- What is the difference between the unbounded wildcard type Set<?> and the raw type Set? <br />
-	You can’t put any element (other than null) into a Collection<?>. Attempting to do so will generate a compile-time error message like this.
+		You can’t put any element (other than null) into a Collection<?>. Attempting to do so will generate a compile-time error message like this.
 - ### Item 27: Eliminate unchecked warnings
 	If you can’t eliminate a warning, but you can prove that the code that provoked the warning is typesafe, then (and only then) suppress the warning with an @SuppressWarnings("unchecked") annotation. Always use the SuppressWarnings annotation on the smallest scope possible. Every time you use a @SuppressWarnings("unchecked") annotation, add a comment saying why it is safe to do so.
 - ### Item 28: Prefer lists to arrays
